@@ -102,3 +102,10 @@ const rootReducer = combineReducers({
     myReducer2: reducer2
 })
 ```
+
+## 3. Middleware
+- Way to extend redux with custom functionality.
+- Provides a third party extension point between dispatch an action,
+and the moment it reaches reducer.
+- Used in logging, crash reporting, performing asyn tasks.
+- Demo file: ***middleware.js***.
