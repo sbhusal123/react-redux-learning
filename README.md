@@ -5,7 +5,9 @@ An is an open-source JavaScript library for managing application state.
 
 ![Architecture](/img/redux.jpg)
 
+
 **Typical Flow:**
+
 ![Flow](/img/flow.png)
 
 
