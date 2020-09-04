@@ -87,3 +87,18 @@ store.dispatch(processItem())
 // Unsubscribe
 unsubscribe()
 ```
+
+## 2. Combining Reducers:
+- For the large applications it becomes hard to manage the actions and reducers in a single file.
+- So we need to separate the actions separaetly.
+- Thus we can combine the multiple reducers as one by combining such reducers using ``combineResucers``.
+- It takes the reducer objects as an argument.
+- Demo file: ***multiple_reducer.js***.
+
+```js
+// Combine Reducers
+const rootReducer = combineReducers({
+    myReducer1: reducer1,
+    myReducer2: reducer2
+})
+```
