@@ -1,0 +1,14 @@
+{
+  "name": "redux-practice",
+  "version": "1.0.0",
+  "description": "Learning to use redux",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "redux": "^4.0.5"
+  }
+}
