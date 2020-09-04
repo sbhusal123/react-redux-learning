@@ -1,5 +1,7 @@
 redux = require("redux")
 
+createStore = redux.createStore
+
 // Action Type
 const BUY_CAKE = 'BUY_CAKE';
 
@@ -27,3 +29,18 @@ const reducer = (state=initialState, action) => {
             return state
     }
 }
+
+
+// Creating Store
+const store = createStore(reducer)
+console.log('Initial state', store.getState()) // get Current State
+
+// Subscribe to the store
+const unsubscribe =  store.subscribe(()=> {console.log("Updated state", store.getState())})
+
+// Dispatch action
+store.dispatch(buyCake())
+store.dispatch(buyCake())
+
+// Unsubscribe
+unsubscribe()

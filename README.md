@@ -62,3 +62,28 @@ const reducer = (state=initialState, action) => {
     }
 }
 ```
+
+### 1.3. Redux Store
+- One Store for entire application.
+
+**Responsibilities:**
+- Holds entire application state.
+- Allows access to state via ``getState()``.
+- Allows state to be updated via ``dispatch(action)``.
+- Register listner via ``subscribe(listner)``. Executed anytime state changes.
+- Handles unregistering of listners via the function returned by ``subscribe(listner)`` using ``unregister()``.
+
+```js
+// Creating Store
+const store = createStore(reducer)
+console.log('Initial state', store.getState()) // get Current State
+
+// Subscribe to the store
+const unsubscribe =  store.subscribe(()=> {console.log("Updated state", store.getState())})
+
+// Dispatch action
+store.dispatch(processItem())
+
+// Unsubscribe
+unsubscribe()
+```
