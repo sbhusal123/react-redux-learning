@@ -109,3 +109,8 @@ const rootReducer = combineReducers({
 and the moment it reaches reducer.
 - Used in logging, crash reporting, performing asyn tasks.
 - Demo file: ***middleware.js***.
+
+## 4. Async Actions:
+- In async actions, it takes certain time to perform action and change the state of apps.
+- Example: Async call to api to fetch data from an endpoint.
+- Demo file: ***async_action.js***
